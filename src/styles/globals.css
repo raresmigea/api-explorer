@@ -1,0 +1,114 @@
+/* src/styles/globals.css */
+
+/* Reset some default styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  /* Set base font and background for the entire application */
+  body {
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, 'Noto Sans', sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol', 'Noto Color Emoji';
+    background-color: #f0f0f0;
+    color: #333;
+  }
+  
+  /* Global styles for buttons */
+  button {
+    cursor: pointer;
+    border: none;
+    background-color: #0070f3;
+    color: white;
+    padding: 0.5em 1em;
+    border-radius: 4px;
+    transition: background-color 0.3s ease;
+  }
+  
+  button:hover {
+    background-color: #005bb5;
+  }
+  
+  /* Global styles for navigation */
+  nav {
+    display: flex;
+    justify-content: center;
+    gap: 1em;
+    margin: 1em 0;
+  }
+  
+  nav button {
+    font-size: 1em;
+    font-weight: bold;
+  }
+  
+  /* Basic styling for the main content area */
+  main {
+    padding: 2em;
+    max-width: 1200px;
+    margin: 0 auto;
+    background-color: white;
+    border-radius: 8px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  }
+  
+  /* Styling for lists of characters, episodes, and locations */
+  ul {
+    list-style: none;
+    padding: 0;
+  }
+  
+  li {
+    margin: 1em 0;
+    padding: 1em;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    background-color: #fff;
+    display: flex;
+    align-items: center;
+  }
+  
+  li img {
+    margin-right: 1em;
+    border-radius: 50%;
+  }
+  
+  li p {
+    margin: 0;
+  }
+
+
+.truncated {
+    max-width: 150px; /* Adjust as needed */
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    cursor: pointer;
+    position: relative;
+  }
+  
+  .truncated:hover::after {
+    content: attr(data-full-text);
+    position: absolute;
+    background: #fff;
+    border: 1px solid #ccc;
+    padding: 5px;
+    z-index: 10;
+    white-space: nowrap;
+    left: 0;
+    top: 100%;
+    transform: translateY(10px);
+  }
+  .pagination-container {
+    margin-top: 20px; /* Adjust margin as needed */
+  }
+  
+  .pagination-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  .pagination-buttons {
+    display: flex;
+    gap: 10px; /* Adjust space between buttons */
+  }

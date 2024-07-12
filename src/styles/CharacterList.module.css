@@ -1,0 +1,47 @@
+/* src/styles/CharacterList.module.css */
+
+.tableContainer {
+    width: 100%;
+    overflow-x: auto; /* Enables horizontal scrolling if needed */
+  }
+  
+  .tableContainer table {
+    width: 100%;
+    border-collapse: collapse; /* Ensure borders collapse properly */
+  }
+  
+  .tableContainer th {
+    padding: 10px;
+    text-align: left;
+    border: none; /* Remove individual cell borders */
+  }
+  
+  .tableContainer td {
+    padding: 10px;
+    text-align: left;
+    border: 1px solid #ccc; /* Add border to each cell */
+    border-radius: 8px; /* Rounded corners for each cell */
+  }
+  
+  .truncated {
+    max-width: 150px; /* Adjust as needed */
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    cursor: pointer;
+    position: relative;
+  }
+  
+  .truncated:hover::after {
+    content: attr(data-full-text);
+    position: absolute;
+    background: #fff;
+    border: 1px solid #ccc;
+    padding: 5px;
+    z-index: 10;
+    white-space: nowrap;
+    left: 0;
+    top: 100%;
+    transform: translateY(10px);
+  }
+  
