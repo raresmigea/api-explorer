@@ -1,4 +1,3 @@
-// pages/index.tsx
 import { useState } from 'react';
 import CharacterList from '../components/CharacterList';
 import EpisodeList from '../components/EpisodeList';

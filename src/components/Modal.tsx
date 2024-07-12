@@ -1,5 +1,5 @@
 import React, { ReactNode } from 'react';
-import styles from '../styles/Modal.module.css'; // Adjust the path to your CSS file
+import styles from '../styles/Modal.module.css';
 
 interface ModalProps {
   onClose: () => void;

@@ -1,14 +1,14 @@
 import React, { useState } from 'react';
 import { useQuery } from '@apollo/client';
-import { GET_LOCATIONS } from '../graphql/queries'; // Adjust the import according to your GraphQL queries file
+import { GET_LOCATIONS } from '../graphql/queries';
 import Modal from './Modal';
-import styles from '../styles/CharacterList.module.css'; // Reuse the same CSS module as CharacterList for styling
+import styles from '../styles/CharacterList.module.css';
 
 const LocationList = () => {
   const [page, setPage] = useState(1);
   const [selectedLocation, setSelectedLocation] = useState<any>(null);
 
-  const itemsPerPage = 10; // Showing 10 items per page
+  const itemsPerPage = 20;
   const { loading, error, data } = useQuery(GET_LOCATIONS, { variables: { page } });
 
   if (loading) return <p>Loading...</p>;
@@ -85,7 +85,6 @@ const LocationList = () => {
                 <th>Dimension</th>
                 <td>{selectedLocation.dimension}</td>
               </tr>
-              {/* Add more rows as needed */}
             </tbody>
           </table>
         </Modal>

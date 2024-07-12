@@ -2,13 +2,13 @@ import React, { useState } from 'react';
 import { useQuery } from '@apollo/client';
 import { GET_CHARACTERS } from '../graphql/queries';
 import Modal from './Modal';
-import styles from '../styles/CharacterList.module.css'; // Adjust path as needed
+import styles from '../styles/CharacterList.module.css';
 
 const CharacterList = () => {
   const [page, setPage] = useState(1);
   const [selectedCharacter, setSelectedCharacter] = useState<any>(null);
 
-  const itemsPerPage = 10; // Show 10 items per page
+  const itemsPerPage = 20;
   const { loading, error, data } = useQuery(GET_CHARACTERS, { variables: { page } });
 
   if (loading) return <p>Loading...</p>;
@@ -82,7 +82,6 @@ const CharacterList = () => {
                 <th>Location</th>
                 <td>{selectedCharacter.location?.name ?? 'Unknown'}</td>
               </tr>
-              {/* Add more rows as needed */}
             </tbody>
           </table>
         </Modal>

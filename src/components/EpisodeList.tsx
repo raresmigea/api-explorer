@@ -2,13 +2,13 @@ import React, { useState } from 'react';
 import { useQuery } from '@apollo/client';
 import { GET_EPISODES } from '../graphql/queries';
 import Modal from './Modal';
-import styles from '../styles/CharacterList.module.css'; // Adjust path as needed
+import styles from '../styles/CharacterList.module.css';
 
 const EpisodeList = () => {
   const [page, setPage] = useState(1);
   const [selectedEpisode, setSelectedEpisode] = useState<any>(null);
 
-  const itemsPerPage = 10; // Show 10 items per page
+  const itemsPerPage = 20;
   const { loading, error, data } = useQuery(GET_EPISODES, { variables: { page } });
 
   if (loading) return <p>Loading...</p>;
