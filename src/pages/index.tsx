@@ -1,4 +1,4 @@
-import { useState } from 'react';
+import React, { useState } from 'react';
 import CharacterList from '../components/CharacterList';
 import EpisodeList from '../components/EpisodeList';
 import LocationList from '../components/LocationList';
